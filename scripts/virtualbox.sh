@@ -18,17 +18,17 @@ if test -f .vbox_version ; then
   VBOX_VERSION=$(cat .vbox_version)
   VBOX_ISO=VBoxGuestAdditions_$VBOX_VERSION.iso
   mount -o loop $VBOX_ISO /mnt
-  yes|sh /mnt/VBoxLinuxAdditions.run
+  yes|sh /mnt/VBoxLinuxAdditions.run --nox11
   umount /mnt
 
 
-  # Start the newly build driver
+  # Start then newly build driver
   /etc/init.d/vboxadd start
 
   # Make a temporary mount point
   mkdir /tmp/veewee-validation
 
   # Test mount the veewee-validation
-  mount -t vboxsf veewee-validation /tmp/veewee-validation
+  # mount -t vboxsf veewee-validation /tmp/veewee-validation
 
 fi
