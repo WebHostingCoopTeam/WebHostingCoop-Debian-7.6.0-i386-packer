@@ -2,8 +2,11 @@
 apt-get -y update
 apt-get -y install linux-headers-$(uname -r) build-essential
 apt-get -y install zlib1g-dev libssl-dev libreadline-gplv2-dev
-apt-get -y install curl unzip
+apt-get -y install curl unzip wget sudo vim
 apt-get clean
+
+echo 'Thoth' >> /root/thoth
+echo `date` >> /root/thoth
 
 # Set up sudo
 echo 'vagrant ALL=NOPASSWD:ALL' > /etc/sudoers.d/vagrant
