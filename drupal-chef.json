@@ -27,6 +27,7 @@
         ],
         "roles_path": "chef/roles",
         "data_bags_path": "chef/data_bags",
+        "config_template": "chef/solo.rb",
         "run_list": ["role[vdd]"],
         "prevent_sudo": false,
         "skip_install": false
@@ -71,7 +72,7 @@
           "modifyvm",
           "{{.Name}}",
           "--memory",
-          "256"
+          "1256"
         ],
         [
           "modifyvm",
