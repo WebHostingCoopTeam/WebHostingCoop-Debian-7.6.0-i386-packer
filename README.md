@@ -5,3 +5,4 @@ Basic i386 debian image for packer development to be used at the WebHosting.coop
 
 Recent changes
  testing support for packer build system
+ testing chef (still broken)
