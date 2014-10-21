@@ -81,5 +81,3 @@
   "description": "Installs Drupal development environment.",
   "chef_type": "role"
 }
-{
-}
